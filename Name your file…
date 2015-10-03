@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int pending[10];
+	int i,key;
+
+	for(i = 0;i < 10; i++)
+		cin >> pending[i]
+
+	for(int j =1;j<10;j++)
+	{
+		int key =pending[j];
+		i=j-1;
+		while(pending[i]>key&&i>0)
+		{
+			pending[i+1]= pending[i];
+			i--;
+		}
+		pending[i+1]= key;
+	}
+
+	for(i = 0;i<10;i++)
+	cout <<pending[i]<<" ";
+	cin >> i;
+	return 0;
+}
